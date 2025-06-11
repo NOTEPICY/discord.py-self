@@ -1,7 +1,5 @@
-# discord_protos.py
+# discord_protos/__init__.py
 
-# This is a dummy fallback implementation of PreloadedUserSettings
-# used to prevent ModuleNotFoundError in patched versions of discord.py-self.
 
 class PreloadedUserSettings:
     def __init__(self):
@@ -34,11 +32,18 @@ class PreloadedUserSettings:
         self.enable_tts_command = False
         self.default_guilds_restricted = False
         self.view_nsfw_guilds = True
-        self.guild_positions = []
         self.native_phone_integration_enabled = False
         self.restricted_guilds = []
         self.passwordless = False
         self.profile = {}
+
+    def SerializeToString(self):
+        return b""
+
+
+class UserSettingsType:
+    def __init__(self):
+        self.preloaded = PreloadedUserSettings()
 
     def SerializeToString(self):
         return b""
