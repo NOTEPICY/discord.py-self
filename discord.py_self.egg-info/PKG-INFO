@@ -1,0 +1,9 @@
+Metadata-Version: 2.4
+Name: discord.py-self
+Version: 2.0.1+epicfix
+Summary: Fixed discord.py-self (patched _get_build_number bug)
+Author: Epic
+Requires-Python: >=3.12
+Dynamic: author
+Dynamic: requires-python
+Dynamic: summary
